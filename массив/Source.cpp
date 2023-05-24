@@ -13,7 +13,7 @@ int main() {
 		 cin >> side;
 		 P += side;
 	}
-	cout << "Perimeter of a pentagon = " << P << endl;
+	cout << "Perimeter of a pentagon = " << P;
 	system("pause>nul");
 	return 0;
 }
