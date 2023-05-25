@@ -42,7 +42,6 @@ int main() {
 	}
 	for (int i = 0; i < N; i++) {
 		while (arr[i] < 0) {
-			cout <<endl<< arr[i] << endl;
 			sum_minstart_minend += arr[i];
 			break;
 		}
