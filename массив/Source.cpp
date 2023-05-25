@@ -23,6 +23,7 @@ int main() {
 			sum_negative += arr[i];
 		}
 	}
+	for (int = )
 	cout <<endl<< "Sum negative = " << sum_negative << endl;
 	cout << "product_paired_el = " << product_paired_el << endl;
 
