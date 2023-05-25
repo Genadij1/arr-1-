@@ -1,23 +1,38 @@
 #include <iostream>
 #include<cstdlib>
-#include<limits>
-#include<ctime>
+#include <limits>
 using namespace std;
 
+const int MONTHS = 12;
+
 int main() {
+    double profits[MONTHS];
+    double maxProfit = numeric_limits<double>::lowest();
+    double minProfit = numeric_limits<double>::max();
 
-    int a, max_a = 0, min_a = numeric_limits<int>::max();
-    const int b = 12;
-    int arr[b + 1];
-    arr[0] = 1;
-    for (int k = 0; k <= b; k++) {
-        arr[k] = k;
-    }
-    for (int i = 1; i <= b; i++) {
-        cout << "Enter profit for " << arr[i] << " month: ";
-        cin >> a;
+
+    cout << "Enter profit (12M):" << endl;
+    for (int i = 0; i < MONTHS; ++i) {
+        cout << "profit for" << (i + 1) << "month: ";
+        cin >> profits[i];
     }
 
-	system("pause>nul");
-	return 0;
+    int startMonth, endMonth;
+    cout << "Enter range: ";
+    cin >> startMonth >> endMonth;
+
+    for (int i = startMonth - 1; i < endMonth; ++i) {
+        if (profits[i] > maxProfit) {
+            maxProfit = profits[i];
+        }
+        if (profits[i] < minProfit) {
+            minProfit = profits[i];
+        }
+    }
+
+
+    cout << "Max profit:" << maxProfit << endl;
+    cout << "Min profit:" << minProfit << endl;
+
+    return 0;
 }
