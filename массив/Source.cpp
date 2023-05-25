@@ -14,16 +14,17 @@ int main() {
 	int product_paired_el = 1;
 	int sum_minstart_minend = 0;
 	for (int i = 0; i < N; i++) {
-		arr[i] = rand() % 30-10;
+		arr[i] = rand() % 20-10;
 		cout << arr[i]<<" ";
+		if (i % 2 == 0) {
+			product_paired_el *= arr[i];
+		}
 		if (arr[i] < 0) {
 			sum_negative += arr[i];
 		}
 	}
-	for (int i = arr[i]; arr[i] >= min_element && arr[i] <= max_element; i++) {
-		product_min_max *= arr[i];
-	}
 	cout <<endl<< "Sum negative = " << sum_negative << endl;
+	cout << "product_paired_el = " << product_paired_el << endl;
 
 
 	system("pause>nul");
