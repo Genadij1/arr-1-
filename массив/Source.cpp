@@ -13,7 +13,7 @@ int main() {
 
     cout << "Enter profit (12M):" << endl;
     for (int i = 0; i < MONTHS; ++i) {
-        cout << "profit for" << (i + 1) << "month: ";
+        cout << "profit for " << (i + 1) << " month: ";
         cin >> profits[i];
     }
 
