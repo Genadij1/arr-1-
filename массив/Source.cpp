@@ -1,6 +1,6 @@
 #include <iostream>
 #include<cstdlib>
-#include<climits>
+#include<limits>
 #include<ctime>
 using namespace std;
 
@@ -8,7 +8,7 @@ int main() {
 	srand(time(NULL));
 	const int a = 20;
 	int arr[a + 1],end,begin;
-	int n, max_num = 0;
+	int n, max_num = 0,min_num= numeric_limits<int>::max();
 	cout << "Enter end num: ";
 	cin >>  end;
 	for (int i = 0; i < a; i++) {
